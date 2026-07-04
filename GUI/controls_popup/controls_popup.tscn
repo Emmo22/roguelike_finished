@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://bctrlspopup01"]
+
+[ext_resource type="Script" uid="uid://d33qu3daf6vst" path="res://GUI/controls_popup/controls_popup.gd" id="1_script"]
+[ext_resource type="FontFile" uid="uid://bs4qpdx8gtucv" path="res://art/fonts/ByteBounce.ttf" id="2_font"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.13, 0.094, 0.105, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.648, 0.466, 0.488, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_key"]
+content_margin_left = 8.0
+content_margin_top = 6.0
+content_margin_right = 8.0
+content_margin_bottom = 6.0
+bg_color = Color(0.219, 0.16, 0.169, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.548, 0.405, 0.423, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="ControlsPopup" type="CanvasLayer" unique_id=211100001]
+process_mode = 3
+layer = 10
+script = ExtResource("1_script")
+
+[node name="Overlay" type="ColorRect" parent="." unique_id=211100002]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.65)
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=211100003]
+custom_minimum_size = Vector2(340, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = -244.0
+offset_right = 247.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=211100004]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Panel/Margin" unique_id=211100005]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="TitleBar" type="HBoxContainer" parent="Panel/Margin/VBox" unique_id=211100006]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Panel/Margin/VBox/TitleBar" unique_id=211100007]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 80
+text = "Steuerung"
+
+[node name="CloseButton" type="Button" parent="Panel/Margin/VBox/TitleBar" unique_id=211100008]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 30
+text = "  X  "
+
+[node name="Separator" type="HSeparator" parent="Panel/Margin/VBox" unique_id=211100009]
+layout_mode = 2
+
+[node name="ControlsGrid" type="GridContainer" parent="Panel/Margin/VBox" unique_id=211100010]
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 12
+columns = 2
+
+[node name="KeySlot_Move" type="PanelContainer" parent="Panel/Margin/VBox/ControlsGrid" unique_id=211100011]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_key")
+
+[node name="KeyLabel" type="Label" parent="Panel/Margin/VBox/ControlsGrid/KeySlot_Move" unique_id=211100012]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "Linker Joycon"
+horizontal_alignment = 1
+
+[node name="Desc_Move" type="Label" parent="Panel/Margin/VBox/ControlsGrid" unique_id=211100013]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "Bewegen"
+
+[node name="KeySlot_Attack" type="PanelContainer" parent="Panel/Margin/VBox/ControlsGrid" unique_id=211100014]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_key")
+
+[node name="KeyLabel" type="Label" parent="Panel/Margin/VBox/ControlsGrid/KeySlot_Attack" unique_id=211100015]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "A"
+horizontal_alignment = 1
+
+[node name="Desc_Attack" type="Label" parent="Panel/Margin/VBox/ControlsGrid" unique_id=211100016]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "Angreifen"
+
+[node name="KeySlot_Esc" type="PanelContainer" parent="Panel/Margin/VBox/ControlsGrid" unique_id=211100017]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_key")
+
+[node name="KeyLabel" type="Label" parent="Panel/Margin/VBox/ControlsGrid/KeySlot_Esc" unique_id=211100018]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "LB"
+horizontal_alignment = 1
+
+[node name="Desc_Esc" type="Label" parent="Panel/Margin/VBox/ControlsGrid" unique_id=211100019]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 50
+text = "zum Titel"
