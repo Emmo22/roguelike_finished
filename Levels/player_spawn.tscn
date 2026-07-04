@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://pa0dv5kjdrnu"]
+
+[ext_resource type="Script" uid="uid://bpmjbp86wx2gw" path="res://Levels/scripts/player_spwan.gd" id="1_lyuil"]
+[ext_resource type="Texture2D" uid="uid://dls3byig51h0d" path="res://props/Sprites/monster1.png" id="2_a5xvq"]
+
+[node name="PlayerSpawn" type="Node2D" unique_id=1470602952]
+script = ExtResource("1_lyuil")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1163303835]
+position = Vector2(218, 265)
+texture = ExtResource("2_a5xvq")

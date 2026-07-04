@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://65wo64qkpa3"]
+
+[ext_resource type="Script" path="res://Levels/scripts/game_room.gd" id="1_game"]
+[ext_resource type="PackedScene" uid="uid://bcmp0vjctlyb3" path="res://LevelEditor/room_builder.tscn" id="2_room"]
+[ext_resource type="PackedScene" uid="uid://pa0dv5kjdrnu" path="res://Levels/player_spawn.tscn" id="3_spawn"]
+[ext_resource type="Script" path="res://Levels/scripts/game_transition.gd" id="4_trans"]
+
+[node name="world" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_game")
+
+[node name="Room00" parent="." instance=ExtResource("2_room")]
+
+[node name="LevelTransition" parent="Room00" index=6]
+script = ExtResource("4_trans")
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("3_spawn")]
+position = Vector2(186, 302)

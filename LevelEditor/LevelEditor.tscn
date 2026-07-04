@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://hralxqn8dpvs"]
+
+[ext_resource type="Script" uid="uid://3gyspoi4d3v7" path="res://Levels/scripts/levels.gd" id="1_onmh3"]
+[ext_resource type="Script" uid="uid://drvk1aimahqp4" path="res://LevelEditor/scripts/editor_object.gd" id="2_hdgag"]
+[ext_resource type="PackedScene" uid="uid://bpwig1dy3elit" path="res://LevelEditor/gui/item_select.tscn" id="3_8lddq"]
+[ext_resource type="PackedScene" uid="uid://bcmp0vjctlyb3" path="res://LevelEditor/room_builder.tscn" id="3_vgbxk"]
+[ext_resource type="TileSet" uid="uid://bfxk7rosof4sm" path="res://LevelEditor/walls/wall_tiles.tres" id="5_g618b"]
+[ext_resource type="PackedScene" uid="uid://pa0dv5kjdrnu" path="res://Levels/player_spawn.tscn" id="5_spawn"]
+[ext_resource type="Script" uid="uid://cj7tammrbwdqu" path="res://LevelEditor/scripts/editor_camera.gd" id="6_cam"]
+
+[node name="LevelEditor" type="Node2D" unique_id=2073331991]
+process_mode = 3
+
+[node name="EditorCamera" type="Camera2D" parent="." unique_id=111111114]
+position = Vector2(800, 450)
+script = ExtResource("6_cam")
+
+[node name="Level" type="Node2D" parent="." unique_id=431986041]
+script = ExtResource("1_onmh3")
+metadata/_custom_type_script = "uid://3gyspoi4d3v7"
+
+[node name="PlayerSpawn" parent="Level" unique_id=111111113 instance=ExtResource("5_spawn")]
+position = Vector2(186, 302)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Level" unique_id=94935940]
+tile_set = ExtResource("5_g618b")
+
+[node name="Room00" parent="Level" unique_id=654671332 instance=ExtResource("3_vgbxk")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=111111111]
+process_mode = 3
+
+[node name="Control" parent="CanvasLayer" unique_id=509392692 instance=ExtResource("3_8lddq")]
+
+[node name="Editor_Object" type="Node2D" parent="CanvasLayer" unique_id=1895089876]
+script = ExtResource("2_hdgag")
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Editor_Object" unique_id=240226286]

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://7fq2vo6hdosa"]
+
+[ext_resource type="Texture2D" uid="uid://ck2vjeyfwtvig" path="res://LevelEditor/sprites/Level_builder_tiles_icon.png" id="1_2gepg"]
+[ext_resource type="Script" uid="uid://cagsbawfq7lh6" path="res://LevelEditor/scripts/item_texture.gd" id="1_egs52"]
+[ext_resource type="Texture2D" uid="uid://cu4e5iqmd6ay7" path="res://LevelEditor/sprites/Level_builder_tiles.png" id="3_wsa4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbrj6"]
+size = Vector2(64, 64)
+
+[sub_resource type="PackedScene" id="PackedScene_cr8jr"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [],
+"names": PackedStringArray("Walls", "Node2D", "Sprite2D", "position", "texture", "hframes", "StaticBody2D", "CollisionShape2D", "shape", "Sprite2D2", "frame", "Sprite2D3", "Sprite2D4", "Sprite2D5"),
+"node_count": 16,
+"node_ids": PackedInt32Array(1956363733, 1760387542, 1551480454, 1293466607, 1774913730, 1473030104, 393193941, 429074023, 141693220, 773156645, 537668807, 1226112989, 584836459, 1892089581, 1820818862, 628284247),
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 0, 0, 2, 2, -1, 3, 3, 0, 4, 1, 5, 2, 0, 1, 0, 6, 6, -1, 0, 0, 2, 0, 7, 7, -1, 1, 8, 3, 0, 0, 0, 2, 9, -1, 4, 3, 4, 4, 1, 5, 2, 10, 5, 0, 4, 0, 6, 6, -1, 0, 0, 5, 0, 7, 7, -1, 1, 8, 3, 0, 0, 0, 2, 11, -1, 4, 3, 6, 4, 1, 5, 2, 10, 7, 0, 7, 0, 6, 6, -1, 0, 0, 8, 0, 7, 7, -1, 1, 8, 3, 0, 0, 0, 2, 12, -1, 4, 3, 8, 4, 1, 5, 2, 10, 9, 0, 10, 0, 6, 6, -1, 0, 0, 11, 0, 7, 7, -1, 1, 8, 3, 0, 0, 0, 2, 13, -1, 4, 3, 10, 4, 1, 5, 2, 10, 11, 0, 13, 0, 6, 6, -1, 0, 0, 14, 0, 7, 7, -1, 1, 8, 3, 0),
+"variants": [Vector2(32, 32), ExtResource("3_wsa4p"), 5, SubResource("RectangleShape2D_xbrj6"), Vector2(112, 32), 1, Vector2(192, 32), 2, Vector2(272, 32), 3, Vector2(352, 32), 4],
+"version": 3
+}
+
+[node name="ItemBlocks" type="TextureRect" unique_id=756391057]
+offset_left = 56.0
+offset_top = 43.0
+offset_right = 120.0
+offset_bottom = 107.0
+mouse_filter = 0
+texture = ExtResource("1_2gepg")
+script = ExtResource("1_egs52")
+tile = true

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://beao1gexxrrou"]
+
+[ext_resource type="Script" uid="uid://cagsbawfq7lh6" path="res://LevelEditor/scripts/item_texture.gd" id="1_3yy8w"]
+
+[node name="ItemTexture" type="TextureRect" unique_id=756391057]
+mouse_filter = 0
+script = ExtResource("1_3yy8w")

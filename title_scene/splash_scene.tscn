@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cfo6vl3pd7urt"]
+
+[node name="SplashScene" type="Control" unique_id=561857718]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=944544760]
+layout_mode = 0
+offset_right = 1598.0
+offset_bottom = 906.0
+color = Color(0.11946394, 0.10172423, 0.1775614, 1)
+
+[node name="GamesLogo" type="Control" parent="." unique_id=802006229]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="GamesLogo" unique_id=310190332]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GamesLogo" unique_id=2071394344]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="GamesLogo" unique_id=1186937514]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=458588000]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

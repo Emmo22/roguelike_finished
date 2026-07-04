@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ptcmqac8j1uv"]
+
+[ext_resource type="PackedScene" uid="uid://beao1gexxrrou" path="res://LevelEditor/gui/item_texture.tscn" id="1_u71r7"]
+[ext_resource type="Texture2D" uid="uid://83mw6cgfwr8u" path="res://LevelEditor/sprites/slime_blue_icon.png" id="2_0j71g"]
+[ext_resource type="PackedScene" uid="uid://cxexon15pq5fw" path="res://Enemies/slime/slime_blue.tscn" id="3_1mndp"]
+
+[node name="Item_slime_blue" unique_id=756391057 instance=ExtResource("1_u71r7")]
+offset_left = 127.0
+offset_top = 89.0
+offset_right = 370.0
+offset_bottom = 340.0
+texture = ExtResource("2_0j71g")
+this_scene = ExtResource("3_1mndp")
